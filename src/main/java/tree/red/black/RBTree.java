@@ -224,6 +224,7 @@ public class RBTree<E extends Comparable<E>> extends AbstractTree<E> {
             // 删除节点存在子节点时，replacement替换p
             RBTreeNode<E> pp = replacement.parent = p.parent;
             if (pp == null) {
+                replacement.red = false;
                 root = replacement;
             } else if (p == pp.left) {
                 pp.left = replacement;
