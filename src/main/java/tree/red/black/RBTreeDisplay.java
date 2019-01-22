@@ -10,9 +10,9 @@ public class RBTreeDisplay extends JApplet {
 
     public RBTreeDisplay() {
 
-/*        Integer[] array = new Integer[10];
+/*        Integer[] array = new Integer[20];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 20);
+            array[i] = (int) (Math.random() * 100);
         }*/
         Integer[] array =
             {26, 17, 41, 14, 21, 30, 47, 10, 16, 19, 23, 28, 38, 7, 12, 15, 20, 35, 39, 3};

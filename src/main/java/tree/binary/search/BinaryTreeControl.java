@@ -44,12 +44,17 @@ public class BinaryTreeControl extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (jtfKey.getText() == null || jtfKey.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "请输入数字");
+                    return;
+                }
                 int key = Integer.parseInt(jtfKey.getText());
                 if (tree.search(key)) {
                     JOptionPane.showMessageDialog(null, key + "：已经存在");
                 } else {
                     tree.insert(key);
                     view.repaint();
+                    jtfKey.setText("");
                 }
             }
         });
@@ -58,6 +63,10 @@ public class BinaryTreeControl extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (jtfKey.getText() == null || jtfKey.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "请输入数字");
+                    return;
+                }
                 int key = Integer.parseInt(jtfKey.getText());
                 if (!tree.search(key)) {
                     JOptionPane.showMessageDialog(null, key + "：不存在");
